@@ -15,6 +15,7 @@ git <!DOCTYPE html>
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
+        <button id="pink_button">Pink</button>
         <div id="color_box" class="gray"></div>        
         <script>
             const gray_button = document.getElementById("gray_button");
@@ -31,6 +32,10 @@ git <!DOCTYPE html>
              * Add a third button (and the associated event handler)
              * to support an additional color: pink
              */
+             const pink_button = document.getElementById("pink_button");
+             pink_button.onclick = function() {
+                 color_box.className = "pink"
+             }
         </script>
 
         <hr>
@@ -43,6 +48,14 @@ git <!DOCTYPE html>
             const counter_button = document.getElementById("counter_button");
             const countspan = document.getElementById("countspan");
             counter_button.onclick = function() {
+                count += 1;
+                console.log(countspan);
+                countspan.textContent = count
+                
+                
+
+
+
                 /* TODO 2
                  *
                  * Fill in this function so that it increments
@@ -50,6 +63,7 @@ git <!DOCTYPE html>
                  * then updates the text content of "countspan"
                  * to show the current value of "count".
                  */
+                
             }
         </script>
 
@@ -60,12 +74,23 @@ git <!DOCTYPE html>
         <script>
             const even_or_odd_button = document.getElementById("even_or_odd_button");
             even_or_odd_button.onclick = function() {
+                var odd = 'odd'
+                
+                if (count%2 ==0  ){
+                    alert("There are an even number of clicks")
+                } else {
+                    alert("There are an odd number of clicks")
+                }
+
+                
+
                 /* TODO 3
                  *
                  * Fill in this function so that it shows an
                  * alert dialog stating whether the count
                  * (from part 2, above) is even or odd.
                  */
+                 
             }
         </script>
     </body>
